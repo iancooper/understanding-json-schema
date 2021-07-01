@@ -123,7 +123,8 @@ data type for a schema.</p>
 <blockquote>
 <div><ul class="simple">
 <li><a class="reference internal" href="string.html#string"><span class="std std-ref">string</span></a></li>
-<li><a class="reference internal" href="numeric.html#numeric"><span class="std std-ref">Numeric types</span></a></li>
+<li><a class="reference internal" href="numeric.html#number"><span class="std std-ref">number</span></a></li>
+<li><a class="reference internal" href="numeric.html#integer"><span class="std std-ref">integer</span></a></li>
 <li><a class="reference internal" href="object.html#object"><span class="std std-ref">object</span></a></li>
 <li><a class="reference internal" href="array.html#array"><span class="std std-ref">array</span></a></li>
 <li><a class="reference internal" href="boolean.html#boolean"><span class="std std-ref">boolean</span></a></li>
@@ -135,20 +136,20 @@ may go by different names.</p>
 <div class="tabbable">
 <ul class="nav nav-tabs simple">
 <li class="disabled"><a class="disabled">Language-specific info:</a></li>
-<li class="active"><a data-toggle="tab" href="#7f94c744fa90_Python">Python</a></li>
-<li><a data-toggle="tab" href="#7f94c744fa90_Ruby">Ruby</a></li>
+<li class="active"><a data-toggle="tab" href="#7f1641d99c40_Python">Python</a></li>
+<li><a data-toggle="tab" href="#7f1641d99c40_Ruby">Ruby</a></li>
 </ul>
 <div class="tab-content section">
-<div class="tab-pane active section" id="7f94c744fa90_Python">
-<p>The following table maps from the names of JavaScript types to
-their analogous types in Python:</p>
+<div class="tab-pane active section" id="7f1641d99c40_Python">
+<p>The following table maps from the names of JSON types to their
+analogous types in Python:</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="48%" />
 <col width="52%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td>JavaScript</td>
+<tr class="row-odd"><td>JSON</td>
 <td>Python</td>
 </tr>
 <tr class="row-even"><td>string</td>
@@ -177,7 +178,7 @@ their analogous types in Python:</p>
 <table class="docutils footnote" frame="void" id="id3" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[4]</a></td><td>Since JavaScript strings always support unicode, they are
+<tr><td class="label"><a class="fn-backref" href="#id1">[4]</a></td><td>Since JSON strings always support unicode, they are
 analogous to <code class="docutils literal notranslate"><span class="pre">unicode</span></code> on Python 2.x and <code class="docutils literal notranslate"><span class="pre">str</span></code> on
 Python 3.x.</td></tr>
 </tbody>
@@ -185,21 +186,21 @@ Python 3.x.</td></tr>
 <table class="docutils footnote" frame="void" id="id4" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id2">[5]</a></td><td>JavaScript does not have separate types for integer and
+<tr><td class="label"><a class="fn-backref" href="#id2">[5]</a></td><td>JSON does not have separate types for integer and
 floating-point.</td></tr>
 </tbody>
 </table>
 </div>
-<div class="tab-pane section" id="7f94c744fa90_Ruby">
-<p>The following table maps from the names of JavaScript types to
-their analogous types in Ruby:</p>
+<div class="tab-pane section" id="7f1641d99c40_Ruby">
+<p>The following table maps from the names of JSON types to their
+analogous types in Ruby:</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="31%" />
 <col width="69%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td>JavaScript</td>
+<tr class="row-odd"><td>JSON</td>
 <td>Ruby</td>
 </tr>
 <tr class="row-even"><td>string</td>
@@ -227,7 +228,7 @@ their analogous types in Ruby:</p>
 <table class="docutils footnote" frame="void" id="id6" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id5">[6]</a></td><td>JavaScript does not have separate types for integer and
+<tr><td class="label"><a class="fn-backref" href="#id5">[6]</a></td><td>JSON does not have separate types for integer and
 floating-point.</td></tr>
 </tbody>
 </table>
@@ -245,7 +246,7 @@ given types.</li>
 <div class="jsonschema highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;number&quot;</span> <span class="p">}</span>
 </pre></div>
 </div>
-<div class="jsonschema-pass highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="mi">42</span>
+<div class="jsonschema-pass highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="mf">42</span>
 </pre></div>
 </div>
 <div class="jsonschema-pass highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="mf">42.0</span>
@@ -260,7 +261,7 @@ structured data types:</p>
 <div class="jsonschema highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">]</span> <span class="p">}</span>
 </pre></div>
 </div>
-<div class="jsonschema-pass highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="mi">42</span>
+<div class="jsonschema-pass highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="mf">42</span>
 </pre></div>
 </div>
 <div class="jsonschema-pass highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Life, the universe, and everything&quot;</span>
@@ -288,8 +289,8 @@ their corresponding types in the following chapters.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2016 Michael Droettboom, Space Telescope Science Institute; © 2016-2020 Michael Droettboom.<br/>
-      Last updated on Apr 12, 2020.<br/>
+        &copy; Copyright 2013-2016 Michael Droettboom, Space Telescope Science Institute; © 2016-2021 Michael Droettboom.<br/>
+      Last updated on Jul 01, 2021.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.<br/>
     </p>
   </div>

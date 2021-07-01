@@ -117,19 +117,23 @@
       
   <div class="section" id="null">
 <span id="index-0"></span><span id="id1"></span><h1>null<a class="headerlink" href="#null" title="Permalink to this headline">¶</a></h1>
-<p>The null type is generally used to represent a missing value.  When a
-schema specifies a <code class="docutils literal notranslate"><span class="pre">type</span></code> of <code class="docutils literal notranslate"><span class="pre">null</span></code>, it has only one acceptable
-value: <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p>
+<p>When a schema specifies a <code class="docutils literal notranslate"><span class="pre">type</span></code> of <code class="docutils literal notranslate"><span class="pre">null</span></code>, it has only one
+acceptable value: <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It’s important to remember that in JSON, <code class="docutils literal notranslate"><span class="pre">null</span></code> isn’t equivalent
+to something being absent. See <a class="reference internal" href="object.html#required"><span class="std std-ref">Required Properties</span></a> for an example.</p>
+</div>
 <div class="tabbable">
 <ul class="nav nav-tabs simple">
 <li class="disabled"><a class="disabled">Language-specific info:</a></li>
-<li class="active"><a data-toggle="tab" href="#7f94c7bc5358_Python">Python</a></li>
-<li><a data-toggle="tab" href="#7f94c7bc5358_Ruby">Ruby</a></li>
+<li class="active"><a data-toggle="tab" href="#7f16420cd6a0_Python">Python</a></li>
+<li><a data-toggle="tab" href="#7f16420cd6a0_Ruby">Ruby</a></li>
 </ul>
 <div class="tab-content section">
-<div class="tab-pane active section" id="7f94c7bc5358_Python">
+<div class="tab-pane active section" id="7f16420cd6a0_Python">
 In Python, <code class="docutils literal notranslate"><span class="pre">null</span></code> is analogous to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</div>
-<div class="tab-pane section" id="7f94c7bc5358_Ruby">
+<div class="tab-pane section" id="7f16420cd6a0_Ruby">
 In Ruby, <code class="docutils literal notranslate"><span class="pre">null</span></code> is analogous to <code class="docutils literal notranslate"><span class="pre">nil</span></code>.</div>
 </div>
 </div><div class="jsonschema highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;null&quot;</span> <span class="p">}</span>
@@ -141,10 +145,13 @@ In Ruby, <code class="docutils literal notranslate"><span class="pre">null</span
 <div class="jsonschema-fail highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kc">false</span>
 </pre></div>
 </div>
-<div class="jsonschema-fail highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span>
+<div class="jsonschema-fail highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="mf">0</span>
 </pre></div>
 </div>
 <div class="jsonschema-fail highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;&quot;</span>
+</pre></div>
+</div>
+<div class="jsonschema-fail highlight-javascript notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -161,8 +168,8 @@ In Ruby, <code class="docutils literal notranslate"><span class="pre">null</span
       
     </p>
     <p>
-        &copy; Copyright 2013-2016 Michael Droettboom, Space Telescope Science Institute; © 2016-2020 Michael Droettboom.<br/>
-      Last updated on Apr 12, 2020.<br/>
+        &copy; Copyright 2013-2016 Michael Droettboom, Space Telescope Science Institute; © 2016-2021 Michael Droettboom.<br/>
+      Last updated on Jul 01, 2021.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.<br/>
     </p>
   </div>

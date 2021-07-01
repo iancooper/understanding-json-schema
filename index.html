@@ -141,10 +141,10 @@ repeated sections, check out <a class="reference internal" href="structuring.htm
 <li><a class="reference external" href="http://json-schema.org">json-schema.org</a> has a number of
 resources, including the official specification and tools for
 working with JSON Schema from various programming languages.</li>
-<li><a class="reference external" href="http://jsonschema.net">jsonschema.net</a> is an online application
-run your own JSON schemas against example documents.  If you want to
-try things out without installing any software, it’s a very handy
-resource.</li>
+<li>There are a number of <a class="reference external" href="https://json-schema.org/implementations.html#validator-web%20(online)">online JSON Schema tools</a>
+that allow you to run your own JSON schemas against example
+documents. These can be very handy if you want to try things out
+without installing any software.</li>
 </ul>
 <p>Contents:</p>
 <div class="toctree-wrapper compound">
@@ -184,15 +184,17 @@ resource.</li>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="reference/object.html">object</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="reference/object.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reference/object.html#pattern-properties">Pattern Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reference/object.html#additional-properties">Additional Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="reference/object.html#required-properties">Required Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="reference/object.html#property-names">Property names</a></li>
 <li class="toctree-l3"><a class="reference internal" href="reference/object.html#size">Size</a></li>
-<li class="toctree-l3"><a class="reference internal" href="reference/object.html#dependencies">Dependencies</a></li>
-<li class="toctree-l3"><a class="reference internal" href="reference/object.html#pattern-properties">Pattern Properties</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="reference/array.html">array</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="reference/array.html#items">Items</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reference/array.html#addtional-items">Addtional Items</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reference/array.html#contains">Contains</a></li>
 <li class="toctree-l3"><a class="reference internal" href="reference/array.html#length">Length</a></li>
 <li class="toctree-l3"><a class="reference internal" href="reference/array.html#uniqueness">Uniqueness</a></li>
 </ul>
@@ -212,35 +214,47 @@ resource.</li>
 <li class="toctree-l3"><a class="reference internal" href="reference/non_json_data.html#examples">Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="reference/combining.html">Combining schemas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reference/combining.html">Schema Composition</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="reference/combining.html#allof">allOf</a></li>
 <li class="toctree-l3"><a class="reference internal" href="reference/combining.html#anyof">anyOf</a></li>
 <li class="toctree-l3"><a class="reference internal" href="reference/combining.html#oneof">oneOf</a></li>
 <li class="toctree-l3"><a class="reference internal" href="reference/combining.html#not">not</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reference/combining.html#properties-of-schema-composition">Properties of Schema Composition</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="reference/conditionals.html">Applying subschemas conditionally</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference/schema.html">The $schema keyword</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="reference/schema.html#advanced">Advanced</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/conditionals.html">Applying subschemas conditionally</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="reference/conditionals.html#dependencies">Dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reference/conditionals.html#if-then-else">If-Then-Else</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reference/conditionals.html#implication">Implication</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="reference/schema.html">Declaring a Specification Version</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="reference/schema.html#schema">$schema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reference/schema.html#extending-json-schema">Extending JSON Schema</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="structuring.html">Structuring a complex schema</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="structuring.html#reuse">Reuse</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="structuring.html#recursion">Recursion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring.html#schema-identification">Schema Identification</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structuring.html#json-pointer">JSON Pointer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structuring.html#named-anchors">Named Anchors</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="structuring.html#the-id-property">The $id property</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="structuring.html#using-id-with-ref">Using $id with $ref</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring.html#base-uri">Base URI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structuring.html#retrieval-uri">Retrieval URI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structuring.html#id">$id</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="structuring.html#extending">Extending</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring.html#ref">$ref</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring.html#definitions">definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring.html#recursion">Recursion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring.html#bundling">Bundling</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<p>There is also a <a class="reference external" href="http://json-schema.org/understanding-json-schema/UnderstandingJSONSchema.pdf">print version of this document</a>.</p>
+<p>There is also a <a class="reference external" href="UnderstandingJSONSchema.pdf">print version of this document</a>.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="credits.html">Acknowledgments</a></li>
@@ -264,8 +278,8 @@ resource.</li>
       
     </p>
     <p>
-        &copy; Copyright 2013-2016 Michael Droettboom, Space Telescope Science Institute; © 2016-2020 Michael Droettboom.<br/>
-      Last updated on Apr 12, 2020.<br/>
+        &copy; Copyright 2013-2016 Michael Droettboom, Space Telescope Science Institute; © 2016-2021 Michael Droettboom.<br/>
+      Last updated on Jul 01, 2021.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.<br/>
     </p>
   </div>
